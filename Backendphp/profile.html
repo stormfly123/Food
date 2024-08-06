@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Vendor Profile</h2>
+        <div id="error-message">
+            <?php if (isset($_SESSION['errors']['general'])) : ?>
+                <span class="error"><?php echo $_SESSION['errors']['general']; ?></span><br>
+                <?php unset($_SESSION['errors']['general']); ?>
+            <?php endif; ?>
+        </div>
+        <form action="update_profile.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="vendor_name">Vendor Name:</label>
+                <input type="text" id="vendor_name" name="vendor_name" value="<?php echo htmlspecialchars($vendor['vendor_name']); ?>" required>
+                <?php if (isset($_SESSION['errors']['vendor_name'])) : ?>
+                    <span class="error"><?php echo $_SESSION['errors']['vendor_name']; ?></span>
+                    <?php unset($_SESSION['errors']['vendor_name']); ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($vendor['email']); ?>" required>
+                <?php if (isset($_SESSION['errors']['email'])) : ?>
+                    <span class="error"><?php echo $_SESSION['errors']['email']; ?></span>
+                    <?php unset($_SESSION['errors']['email']); ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" value="<?php echo htmlspecialchars($vendor['location']); ?>" required>
+                <?php if (isset($_SESSION['errors']['location'])) : ?>
+                    <span class="error"><?php echo $_SESSION['errors']['location']; ?></span>
+                    <?php unset($_SESSION['errors']['location']); ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" value="<?php echo htmlspecialchars($vendor['phone']); ?>" required>
+                <?php if (isset($_SESSION['errors']['phone'])) : ?>
+                    <span class="error"><?php echo $_SESSION['errors']['phone']; ?></span>
+                    <?php unset($_SESSION['errors']['phone']); ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="profile_image">Profile Image:</label>
+                <input type="file" id="profile_image" name="profile_image" accept="image/*">
+                <img src="uploads/<?php echo htmlspecialchars($vendor['profile_image']); ?>" alt="Profile Image" class="profile-image">
+                <?php if (isset($_SESSION['errors']['profile_image'])) : ?>
+                    <span class="error"><?php echo $_SESSION['errors']['profile_image']; ?></span>
+                    <?php unset($_SESSION['errors']['profile_image']); ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="cover_image">Cover Image:</label>
+                <input type="file" id="cover_image" name="cover_image" accept="image/*">
+                <img src="uploads/<?php echo htmlspecialchars($vendor['cover_image']); ?>" alt="Cover Image" class="cover-image">
+                <?php if (isset($_SESSION['errors']['cover_image'])) : ?>
+                    <span class="error"><?php echo $_SESSION['errors']['cover_image']; ?></span>
+                    <?php unset($_SESSION['errors']['cover_image']); ?>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <button type="submit">Update Profile</button>
+            </div>
+        </form>
+        <a href="logout.php" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>

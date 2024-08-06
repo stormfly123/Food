@@ -1,0 +1,218 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #ff7f50;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.overview {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.overview h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.metric {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+    flex: 1;
+    min-width: 200px;
+}
+
+.metric h2 {
+    color: #ff7f50;
+    font-size: 1.5rem;
+}
+
+.metric p.count {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.recent-orders {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.recent-orders h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    .metrics {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    header {
+        padding: 1rem;
+    }
+
+    .overview {
+        margin-bottom: 1.5rem;
+    }
+
+    .overview h1 {
+        margin-bottom: 1.5rem;
+    }
+
+    .metric {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+
+    .recent-orders {
+        padding: 1.5rem;
+    }
+
+    .recent-orders h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    table th, table td {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    header {
+        padding: 0.5rem;
+    }
+
+    .metric {
+        padding: 0.75rem;
+    }
+
+    .metric h2 {
+        font-size: 1.25rem;
+    }
+
+    .metric p.count {
+        font-size: 1.5rem;
+    }
+
+    .recent-orders {
+        padding: 1rem;
+    }
+
+    table th, table td {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Vendor Registration</title>
+    <link rel="stylesheet" href="css/reg.css">
+</head>
+<body style="background-image: url('/Img/doodle.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+
+    <div class="container">
+        <h2>Food Vendor Registration</h2>
+        <div id="error-message">
+            <?php if (!empty($errors['general'])) : ?>
+                <span class="error"><?php echo $errors['general']; ?></span><br>
+            <?php endif; ?>
+        </div>
+        <form action="register_vendor.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="vendor_name">Vendor Name:</label>
+                <input type="text" id="vendor_name" name="vendor_name" required>
+                <?php if (isset($errors['vendor_name'])) : ?>
+                    <span class="error"><?php echo $errors['vendor_name']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <?php if (isset($errors['email'])) : ?>
+                    <span class="error"><?php echo $errors['email']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <?php if (isset($errors['password'])) : ?>
+                    <span class="error"><?php echo $errors['password']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+                <?php if (isset($errors['location'])) : ?>
+                    <span class="error"><?php echo $errors['location']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="text" id="phone" name="phone" required>
+                <?php if (isset($errors['phone'])) : ?>
+                    <span class="error"><?php echo $errors['phone']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="profile_image">Profile Image:</label>
+                <input type="file" id="profile_image" name="profile_image" accept="image/*" required>
+                <?php if (isset($errors['profile_image'])) : ?>
+                    <span class="error"><?php echo $errors['profile_image']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <label for="cover_image">Cover Image:</label>
+                <input type="file" id="cover_image" name="cover_image" accept="image/*" required>
+                <?php if (isset($errors['cover_image'])) : ?>
+                    <span class="error"><?php echo $errors['cover_image']; ?></span>
+                <?php endif; ?>
+            </div>
+            <div class="form-group">
+                <button type="submit">Register</button>
+            </div>
+        </form>
+        
+        <p>Already have an account? <a href="signin.html">Sign in</a></p>
+    </div>
+</body>
+</html>

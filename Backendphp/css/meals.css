@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.meals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.meal {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.meal img.meal-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.meal h2 {
+    margin: 15px 0 10px;
+    font-size: 1.5em;
+}
+
+.meal p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.meal p.price, .meal p.delivery-fee {
+    font-weight: bold;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        padding: 15px;
+    }
+
+    .meal {
+        width: 45%;
+    }
+
+    .meal h2 {
+        font-size: 1.3em;
+    }
+
+    .meal p {
+        font-size: 1em;
+    }
+
+    .pagination a {
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .meal {
+        width: 90%;
+    }
+
+    .meal h2 {
+        font-size: 1.2em;
+    }
+
+    .meal p {
+        font-size: 0.9em;
+    }
+
+    .pagination a {
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 5px;
+    }
+
+    .meal {
+        width: 100%;
+    }
+
+    .meal h2 {
+        font-size: 1.1em;
+    }
+
+    .meal p {
+        font-size: 0.8em;
+    }
+
+    .pagination a {
+        padding: 4px 8px;
+    }
+}

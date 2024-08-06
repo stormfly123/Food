@@ -1,0 +1,251 @@
+/* Reset margins and paddings, and set box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    margin: 0;
+    color: #FFA500; /* Orange color */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Navigation bar */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav img {
+    width: 180px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: large;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: #FFA500; /* Visible text color */
+    font-size: 20px;
+}
+
+/* Hamburger menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #FFA500;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* Hero section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 80px; /* Adjust for fixed nav */
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
+}
+
+.hero .text-box {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    color: white; /* Ensure text is visible on the overlay */
+}
+
+.hero h1 {
+    font-size: 3em;
+    line-height: 1.2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+}
+
+.hero button {
+    padding: 10px 20px;
+    background: #FFA500;
+    border: 0;
+    outline: 0;
+    margin: 10px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+}
+
+.hero button:last-child {
+    background: chocolate;
+}
+
+/* Cards section */
+.cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 60px 8%;
+}
+
+.card {
+    background: #f9f9f9;
+    border-radius: 20px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .card-icon {
+    font-size: 3em;
+    color: #FFA500;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 1em;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background: #FFA500;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .hero {
+        padding: 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero button {
+        margin: 5px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        background: white;
+        width: 200px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero button {
+        margin: 5px 0;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .cards .card {
+        width: 100%;
+    }
+}

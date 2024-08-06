@@ -1,0 +1,10 @@
+<!-- Example form fields for editing meal -->
+<form action="process_edit_meal.php" method="POST">
+    <input type="hidden" name="meal_id" value="<?php echo htmlspecialchars($meal_id); ?>">
+    <div class="form-group">
+        <label for="mealName">Meal Name:</label>
+        <input type="text" id="mealName" name="mealName" value="<?php echo htmlspecialchars($mealName); ?>" required>
+    </div>
+    <!-- Other form fields (description, price, delivery fee, etc.) -->
+    <button type="submit">Update Meal</button>
+</form>

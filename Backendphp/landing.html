@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EatsNow</title>
+    <link rel="stylesheet" href="./css/landing.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+</head>
+<body onload="document.body.style.visibility='visible';">
+    <nav>
+        <img src="Img/Eats_Now__1_-removebg-preview (1).png" alt="Logo">
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <!-- <li><a href="About.html">About Us</a></li> -->
+            <li><a href="https://wa.link/8fnt07">Contact Us</a></li>
+            <li><a href="signin.html">Vendor</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" id="home">
+        <img src="./Img/stud.jpg" alt="Hero Image">
+        <div class="text-box">
+            <h1>Welcome to Eats Now!</h1>
+            <p>Fast Delivery, Delicious Food</p>
+            <!-- <button>Download For Android</button> -->
+            <!-- <button>Download For iOS</button> -->
+        </div>
+    </div>
+
+    <section class="cards">
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-truck"></i></div>
+            <div class="card-content">
+                <h3>Fast Delivery</h3>
+                <p>Get your meals delivered quickly and efficiently.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-hamburger"></i></div>
+            <div class="card-content">
+                <h3>Delicious Meals</h3>
+                <p>Enjoy a variety of delicious meals from local restaurants.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-lock"></i></div>
+            <div class="card-content">
+                <h3>Secure Payment</h3>
+                <p>Experience safe and secure payment options.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon"><i class="fas fa-headset"></i></div>
+            <div class="card-content">
+                <h3>Customer Support</h3>
+                <p>Our support team is here to help you with any issues.</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <footer>
+        <p>&copy; 2024 Eats Now. All rights reserved.</p>
+    </footer>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+});
+
+    </script>
+</body>
+</html>

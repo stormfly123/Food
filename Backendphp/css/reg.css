@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-size: cover; /* Adjusts the image to cover the entire background */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the background image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Ensure no margin around the body */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="location"],
+input[type="email"],
+input[type="password"],
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+button[type="submit"]:hover {
+    background-color: darkorange;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        height: auto;
+        padding: 20px;
+    }
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+    input[type="text"],
+    input[type="location"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+        padding: 8px;
+        font-size: 13px;
+    }
+    button[type="submit"] {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: auto;
+        padding: 10px;
+    }
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+    input[type="text"],
+    input[type="location"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"] {
+        padding: 6px;
+        font-size: 12px;
+    }
+    button[type="submit"] {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}
+
